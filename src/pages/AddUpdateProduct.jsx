@@ -86,38 +86,38 @@ const submit = async (e) => {
 
 
   return (
-    <form onSubmit={submit} className="max-w-lg mx-auto bg-white p-6 rounded shadow space-y-4">
-      <h1 className="text-2xl font-bold">{isEdit ? "Update" : "Add"} Product</h1>
-      <div className="flex flex-col">
-        <label htmlFor="name" className="capitalize">Name</label>
+    <form onSubmit={submit} className="max-w-full sm:max-w-lg mx-auto bg-white p-3 sm:p-6 rounded shadow space-y-3 sm:space-y-4">
+      <h1 className="text-xl sm:text-2xl font-bold">{isEdit ? "Update" : "Add"} Product</h1>
+      <div className="flex flex-col gap-1">
+        <label htmlFor="name" className="capitalize text-sm sm:text-base">Name</label>
         <input
           type="text"
           name="name"
           id="name"
           value={form.name}
           onChange={handleChange}
-          className="border p-2 rounded"
+          className="border p-1 sm:p-2 rounded text-sm sm:text-base"
         />
       </div>
-      <div className="flex flex-col">
-        <label htmlFor="desc" className="capitalize">Description</label>
+      <div className="flex flex-col gap-1">
+        <label htmlFor="desc" className="capitalize text-sm sm:text-base">Description</label>
         <textarea
           name="desc"
           id="desc"
           value={form.desc}
           onChange={handleChange}
-          className="border p-2 rounded"
+          className="border p-1 sm:p-2 rounded text-sm sm:text-base"
         />
       </div>
-      <div className="flex flex-col">
-        <label htmlFor="price" className="capitalize">Price</label>
+      <div className="flex flex-col gap-1">
+        <label htmlFor="price" className="capitalize text-sm sm:text-base">Price</label>
         <input
           type="number"
           name="price"
           id="price"
           value={form.price}
           onChange={handleChange}
-          className="border p-2 rounded"
+          className="border p-1 sm:p-2 rounded text-sm sm:text-base"
         />
       </div>
       <div className="flex flex-col">
